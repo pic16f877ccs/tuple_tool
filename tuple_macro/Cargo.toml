@@ -1,15 +1,15 @@
 [package]
 name = "tuple_macro"
-authors.workspace = true
 version = "0.1.1"
-edition.workspace = true
-readme.workspace = true
-repository.workspace = true
-homepage.workspace = true
-license.workspace = true
-discription.workspace = true
-keywords.workspace = true
-categories.workspace = true
+authors = ["Karl Wulfert <pic16f877.ccs@emailn.de>"]
+edition = "2021"
+readme = "README.md"
+repository = "https://github.com/pic16f877ccs/tuple_tool"
+homepage = "https://github.com/pic16f877ccs/tuple_tool"
+license = "GPL-3.0-or-later"
+description = "Library for determining the length of a tuple."
+keywords = ["trait", "no-std", "tuple-len", "tuple"]
+categories = ["rust-patterns"]
 
 [lib]
 name = "tuple_macro"
