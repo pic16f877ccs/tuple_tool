@@ -3,11 +3,18 @@ members = ["tuple_len", "tuple_macro"]
 default-members = ["tuple_len", "tuple_macro"]
 
 [workspace.package]
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Karl Wulfert <pic16f877.ccs@emailn.de>"]
 edition = "2021"
+readme = "README.md"
+repository = "https://github.com/pic16f877ccs/tuple_tool"
+homepage = "https://github.com/pic16f877ccs/tuple_tool"
+license = "GPL-3.0-or-later"
+description = "Library for determining the length of a tuple."
+keywords = ["trait", "no-std", "tuple-len", "tuple"]
+categories = ["rust-patterns"]
 
 [workspace.dependencies]
-tuple_macro = { path = "tuple_macro" }
-tuple_len = { path = "tuple_len" }
+tuple_macro = { version = "0.1.1", path = "tuple_macro" }
+tuple_len = { version = "0.1.1", path = "tuple_len" }
 

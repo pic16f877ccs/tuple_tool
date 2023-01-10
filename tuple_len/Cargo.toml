@@ -1,14 +1,21 @@
 [package]
 name = "tuple_len"
 authors.workspace = true
-version.workspace = true
+version = "0.1.1"
 edition.workspace = true
+readme.workspace = true
+repository.workspace = true
+homepage.workspace = true
+license.workspace = true
+discription.workspace = true
+keywords.workspace = true
+categories.workspace = true
 
 [lib]
 name = "tuple_len"
 
 [dependencies]
-tuple_macro = { workspace = true, path = "tuple_macro" }
+tuple_macro = { version = "0.1.1", workspace = true, path = "tuple_macro" }
 
 [features]
 16 = ["tuple_macro/16"]

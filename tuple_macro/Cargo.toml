@@ -1,7 +1,15 @@
 [package]
 name = "tuple_macro"
-version.workspace = true
-edition = "2021"
+authors.workspace = true
+version = "0.1.1"
+edition.workspace = true
+readme.workspace = true
+repository.workspace = true
+homepage.workspace = true
+license.workspace = true
+discription.workspace = true
+keywords.workspace = true
+categories.workspace = true
 
 [lib]
 name = "tuple_macro"
