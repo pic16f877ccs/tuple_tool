@@ -1,0 +1,13 @@
+[workspace]
+members = ["tuple_len", "tuple_macro"]
+default-members = ["tuple_len", "tuple_macro"]
+
+[workspace.package]
+version = "0.1.0"
+authors = ["Karl Wulfert <pic16f877.ccs@emailn.de>"]
+edition = "2021"
+
+[workspace.dependencies]
+tuple_macro = { path = "tuple_macro" }
+tuple_len = { path = "tuple_len" }
+

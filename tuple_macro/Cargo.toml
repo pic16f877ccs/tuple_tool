@@ -1,0 +1,15 @@
+[package]
+name = "tuple_macro"
+version.workspace = true
+edition = "2021"
+
+[lib]
+name = "tuple_macro"
+proc-macro = true
+
+[dependencies]
+
+[features]
+16 = []
+32 = []
+64 = []

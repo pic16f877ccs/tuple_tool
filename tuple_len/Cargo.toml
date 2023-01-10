@@ -1,0 +1,18 @@
+[package]
+name = "tuple_len"
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+
+[lib]
+name = "tuple_len"
+
+[dependencies]
+tuple_macro = { workspace = true, path = "tuple_macro" }
+
+[features]
+16 = ["tuple_macro/16"]
+32 = ["tuple_macro/32"]
+64 = ["tuple_macro/64"]
+
+
