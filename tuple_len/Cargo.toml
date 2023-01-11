@@ -12,7 +12,7 @@ keywords = ["trait", "no-std", "tuple-len", "tuple"]
 categories = ["rust-patterns"]
 
 [lib]
-name = "tuple_len"
+name = "tuple_length"
 
 [dependencies]
 tuple_macro = { version = "0.1.1", workspace = true, path = "tuple_macro" }
