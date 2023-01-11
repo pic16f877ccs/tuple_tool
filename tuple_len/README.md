@@ -4,7 +4,7 @@ Return the length of a tuple.
 ### Examples                                                                                                                                                   
 Usage:
 ```
-use crate::tuple_len::TupLen;
+use tuple_length::TupLen;
 
 assert_eq!(().len(), 0);
 assert_eq!((1i8,).len(), 1);
