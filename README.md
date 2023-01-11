@@ -5,6 +5,7 @@ Return the length of a tuple.
 Usage:
 ```
 use tuple_length::TupLen;
+
 assert_eq!(().len(), 0);
 assert_eq!((1i8,).len(), 1);
 assert_eq!((1u16, 2u64).len(), 2);
