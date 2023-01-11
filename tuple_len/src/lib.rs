@@ -7,7 +7,7 @@
 //! # Examples
 //! Usage:
 //! ```
-//! # use crate::tuple_len::TupLen;
+//! # use tuple_length::TupLen;
 //! assert_eq!(().len(), 0);
 //! assert_eq!((1i8,).len(), 1);
 //! assert_eq!((1u16, 2u64).len(), 2);
@@ -30,7 +30,7 @@ pub trait TupLen {
     /// # Examples
     /// Usage:
     /// ```
-    /// # use crate::tuple_len::TupLen;
+    /// # use tuple_length::TupLen;
     /// let tuple: (i8, u8, i16, u16, i32, u32, i64, &str) = (-128, 255, -327, 655, -100, 229, -5,
     /// "rust");
     /// assert_eq!(tuple.len(), 8);
