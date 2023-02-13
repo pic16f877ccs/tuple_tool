@@ -3,7 +3,7 @@ members = ["tuple_len", "tuple_macro"]
 default-members = ["tuple_len", "tuple_macro"]
 
 [workspace.package]
-version = "0.1.1"
+version = "0.2.0"
 authors = ["Karl Wulfert <pic16f877.ccs@emailn.de>"]
 edition = "2021"
 readme = "README.md"
@@ -15,6 +15,6 @@ keywords = ["trait", "no-std", "tuple-len", "tuple"]
 categories = ["rust-patterns"]
 
 [workspace.dependencies]
-tuple_macro = { version = "0.1.1", path = "tuple_macro" }
-tuple_len = { version = "0.1.1", path = "tuple_len" }
+tuple_macro = { version = "0.2.0", path = "tuple_macro" }
+tuple_len = { version = "0.2.0", path = "tuple_len" }
 

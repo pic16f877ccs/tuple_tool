@@ -18,7 +18,7 @@
 //! By default the selected operations are implemented to tuples upto a length of **8 elements**.
 //!
 //! # Features
-//! You can specify the length: features = ["16"] or features = ["32"] or features = ["64"].
+//! You can specify the length: features = ["tup_len_16"] or features = ["tup_len_32"] or features = ["tup_len_64"].
 //!
 
 extern crate tuple_macro;
