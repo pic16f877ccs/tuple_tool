@@ -25,19 +25,21 @@ extern crate tuple_macro;
 use tuple_macro::tuple_length;
 
 /// Implements the len method on a tuple.
+///
+/// # Examples
+/// Usage:
+///
+/// ```
+/// # use tuple_length::TupLen;
+/// let tuple: (i8, u8, i16, u16, i32, u32, i64, &str) = (-128, 255, -327, 655, -100, 229, -5,
+/// "rust");
+/// assert_eq!(tuple.len(), 8);
+///
+/// let tuple = ([2u8, 0u8, 2u8, 1u8], 2021u16, vec!["r", "u", "s", "t"]);
+/// assert_eq!(tuple.len(), 3);
+/// ```
 pub trait TupLen {
     /// Returns the length of this tuple.
-    /// # Examples
-    /// Usage:
-    /// ```
-    /// # use tuple_length::TupLen;
-    /// let tuple: (i8, u8, i16, u16, i32, u32, i64, &str) = (-128, 255, -327, 655, -100, 229, -5,
-    /// "rust");
-    /// assert_eq!(tuple.len(), 8);
-    ///
-    /// let tuple = ([2u8, 0u8, 2u8, 1u8], 2021u16, vec!["r", "u", "s", "t"]);
-    /// assert_eq!(tuple.len(), 3);
-    /// ```
     fn len(&self) -> usize;
 }
 

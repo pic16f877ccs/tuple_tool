@@ -1,6 +1,6 @@
 [package]
 name = "tuple_length"
-version = "0.2.0"
+version = "0.2.1"
 authors = ["Karl Wulfert <pic16f877.ccs@emailn.de>"]
 edition = "2021"
 readme = "README.md"
@@ -15,7 +15,7 @@ categories = ["rust-patterns"]
 name = "tuple_length"
 
 [dependencies]
-tuple_macro = { version = "0.2.0", workspace = true, path = "tuple_macro" }
+tuple_macro = { version = "0.2.0", path = "../tuple_macro" }
 
 [features]
 tup_len_16 = ["tuple_macro/tup_len_16"]
