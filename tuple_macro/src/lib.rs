@@ -91,51 +91,159 @@ macro_rules! from_tup_trait {
     };
 }
 
-#[cfg(all(not(feature = "tup_len_16"), not(feature = "tup_len_32"), not(feature = "tup_len_64")))]
+#[cfg(all(
+    not(feature = "tup_len_16"),
+    not(feature = "tup_len_32"),
+    not(feature = "tup_len_64")
+))]
 tuple_len_impl!(8);
 
-#[cfg(all(feature = "tup_len_16", not(feature = "tup_len_32"), not(feature = "tup_len_64")))]
+#[cfg(all(
+    feature = "tup_len_16",
+    not(feature = "tup_len_32"),
+    not(feature = "tup_len_64")
+))]
 tuple_len_impl!(16);
 
-#[cfg(all(feature = "tup_len_16", feature = "tup_len_32", not(feature = "tup_len_64")))]
+#[cfg(all(
+    feature = "tup_len_16",
+    feature = "tup_len_32",
+    not(feature = "tup_len_64")
+))]
+tuple_len_impl!(32);
+#[cfg(all(
+    feature = "tup_len_32",
+    not(feature = "tup_len_16"),
+    not(feature = "tup_len_64")
+))]
 tuple_len_impl!(32);
 
-#[cfg(all(feature = "tup_len_32", not(feature = "tup_len_16"), not(feature = "tup_len_64")))]
-tuple_len_impl!(32);
-
-#[cfg(all(feature = "tup_len_16", feature = "tup_len_64", not(feature = "tup_len_32")))]
+#[cfg(all(
+    feature = "tup_len_16",
+    feature = "tup_len_64",
+    not(feature = "tup_len_32")
+))]
 tuple_len_impl!(64);
-
-#[cfg(all(feature = "tup_len_32", feature = "tup_len_64", not(feature = "tup_len_16")))]
+#[cfg(all(
+    feature = "tup_len_32",
+    feature = "tup_len_64",
+    not(feature = "tup_len_16")
+))]
 tuple_len_impl!(64);
-
-#[cfg(all(feature = "tup_len_64", not(feature = "tup_len_16"), not(feature = "tup_len_32")))]
+#[cfg(all(
+    feature = "tup_len_64",
+    not(feature = "tup_len_16"),
+    not(feature = "tup_len_32")
+))]
 tuple_len_impl!(64);
-
 #[cfg(all(feature = "tup_len_16", feature = "tup_len_32", feature = "tup_len_64"))]
 tuple_len_impl!(64);
 
-
-#[cfg(all(not(feature = "from_tup_16"), not(feature = "from_tup_32"), not(feature = "from_tup_64")))]
+#[cfg(all(
+    feature = "from_tup_8",
+    not(feature = "from_tup_16"),
+    not(feature = "from_tup_32"),
+    not(feature = "from_tup_64")
+))]
 from_tup_trait!(8);
 
-#[cfg(all(feature = "from_tup_16", not(feature = "from_tup_32"), not(feature = "from_tup_64")))]
+#[cfg(all(
+    feature = "from_tup_16",
+    not(feature = "from_tup_8"),
+    not(feature = "from_tup_32"),
+    not(feature = "from_tup_64")
+))]
+from_tup_trait!(16);
+#[cfg(all(
+    feature = "from_tup_16",
+    feature = "from_tup_8",
+    not(feature = "from_tup_32"),
+    not(feature = "from_tup_64")
+))]
 from_tup_trait!(16);
 
-#[cfg(all(feature = "from_tup_16", feature = "from_tup_32", not(feature = "from_tup_64")))]
+#[cfg(all(
+    feature = "from_tup_32",
+    not(feature = "from_tup_8"),
+    not(feature = "from_tup_16"),
+    not(feature = "from_tup_64")
+))]
+from_tup_trait!(32);
+#[cfg(all(
+    feature = "from_tup_32",
+    feature = "from_tup_8",
+    not(feature = "from_tup_16"),
+    not(feature = "from_tup_64")
+))]
+from_tup_trait!(32);
+#[cfg(all(
+    feature = "from_tup_32",
+    feature = "from_tup_16",
+    not(feature = "from_tup_8"),
+    not(feature = "from_tup_64")
+))]
+from_tup_trait!(32);
+#[cfg(all(
+    feature = "from_tup_32",
+    feature = "from_tup_8",
+    feature = "from_tup_16",
+    not(feature = "from_tup_64")
+))]
 from_tup_trait!(32);
 
-#[cfg(all(feature = "from_tup_32", not(feature = "from_tup_16"), not(feature = "from_tup_64")))]
-from_tup_trait!(32);
-
-#[cfg(all(feature = "from_tup_16", feature = "from_tup_64", not(feature = "from_tup_32")))]
+#[cfg(all(
+    feature = "from_tup_64",
+    not(feature = "from_tup_8"),
+    not(feature = "from_tup_16"),
+    not(feature = "from_tup_32")
+))]
 from_tup_trait!(64);
-
-#[cfg(all(feature = "from_tup_32", feature = "from_tup_64", not(feature = "from_tup_16")))]
+#[cfg(all(
+    feature = "from_tup_64",
+    feature = "from_tup_8",
+    not(feature = "from_tup_16"),
+    not(feature = "from_tup_32")
+))]
 from_tup_trait!(64);
-
-#[cfg(all(feature = "from_tup_64", not(feature = "from_tup_16"), not(feature = "from_tup_32")))]
+#[cfg(all(
+    feature = "from_tup_64",
+    feature = "from_tup_16",
+    not(feature = "from_tup_8"),
+    not(feature = "from_tup_32")
+))]
 from_tup_trait!(64);
-
-#[cfg(all(feature = "from_tup_16", feature = "from_tup_32", feature = "from_tup_64"))]
+#[cfg(all(
+    feature = "from_tup_64",
+    feature = "from_tup_32",
+    not(feature = "from_tup_8"),
+    not(feature = "from_tup_16")
+))]
+from_tup_trait!(64);
+#[cfg(all(
+    feature = "from_tup_64",
+    feature = "from_tup_8",
+    feature = "from_tup_16",
+    not(feature = "from_tup_32")
+))]
+from_tup_trait!(64);
+#[cfg(all(
+    feature = "from_tup_64",
+    feature = "from_tup_8",
+    feature = "from_tup_32",
+    not(feature = "from_tup_16")
+))]
+from_tup_trait!(64);
+#[cfg(all(
+    feature = "from_tup_64",
+    feature = "from_tup_16",
+    feature = "from_tup_32",
+    not(feature = "from_tup_8")
+))]
+from_tup_trait!(64);
+#[cfg(all(
+    feature = "from_tup_64",
+    feature = "from_tup_8",
+    feature = "from_tup_16",
+    feature = "from_tup_32"
+))]
 from_tup_trait!(64);
