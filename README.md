@@ -3,7 +3,7 @@
 Return the length of a tuple.
 ### Examples                                                                                                                                                   
 Usage:
-```
+```rust
 use tuple_length::TupLen;
 
 assert_eq!(().len(), 0);
